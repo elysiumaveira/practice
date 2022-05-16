@@ -86,7 +86,7 @@
             int width = Convert.ToInt32(Console.ReadLine());
             WriteLine("Введите высоту: ");
             int height = Convert.ToInt32(Console.ReadLine());
-            int x2 = 3, y2 = 2, width2 = 3, height = 2;
+            int x2 = 3, y2 = 2, width2 = 3, height2 = 2;
             rectangle rect1 = new rectangle(x, y, width, height);
             // Здесь менять на сколько перемещать и изменять.
             int izmx = 1, izmy = 1;

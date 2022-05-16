@@ -5,7 +5,7 @@ class Printing
     public string Title {get ; set;}
     public int PageCount {get; set;}
 
-    public Printing(string title, int PageCount)
+    public Printing(string title, int page_count)
     {
         Title = title;
         PageCount = page_count;
