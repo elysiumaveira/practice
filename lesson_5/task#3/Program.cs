@@ -7,12 +7,12 @@ void DigitCountSum(string k)
     int c = k.Length;
     int s = 0;
 
-    k = ToInt16(k);
+    int number = ToInt16(k);
     
-    while (k > 0)
+    while (number > 0)
     {   
-        s += k % 10;
-        k = k / 10;
+        s += number % 10;
+        number = number / 10;
     }
 
     WriteLine($"Количество цифр числа k: {c}");
