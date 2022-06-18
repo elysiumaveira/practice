@@ -9,8 +9,20 @@ try
 
     for (int i = 0; i < str.Length; i++)
         textStack.Push(str[i]);
-
-    Console.WriteLine(EraseCharacters(textStack));
+// можео было сразу удалять
+   /* foreach(var symbol in str)
+    {
+      if(symbol.Equals('#') & taxtStack.Count >0 )
+      {
+          textStack.Pop(symbol);
+      }
+        else 
+      {
+        textStack.Push(sumbol);      
+      }
+    }
+*/
+Console.WriteLine(EraseCharacters(textStack));
 }
 
 catch (Exception ex)
@@ -22,7 +34,7 @@ string EraseCharacters(Stack<char> text)
 {
     int counter = 0;
     string str = string.Empty;
-
+//Можно было сразу удалять элементы в добавлении в стэк
     while (text.Count > 0)
     {
         char c = text.Pop();
@@ -32,10 +44,12 @@ string EraseCharacters(Stack<char> text)
             counter--;
         else str += c;
     }
-    char[] chars = new char[str.Length];
-    chars = str.Select(x => x).ToArray();
+    char[] chars = new char[str.Length]; //Эту строчку можно было вообще не делать, тогда
+   // var chars = str.Select(x => x).ToArray(); но еще лучше
+    //var chars = dtr.ToCharArray(); тогда
+    chars = str.Select(x => x).ToArray(); //эта строчка не нужна
     Array.Reverse(chars);
     str = new string(chars);
 
-    return str;
+    return str; //return new string(chars);
 }
